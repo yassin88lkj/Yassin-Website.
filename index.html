@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine Flow Portfolio</title>
+    <style>
+        /* Basic resets and font settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: black;
+            background-color: white;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: black;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        /* Language Toggle Button */
+        .language-toggle {
+            padding: 8px 16px;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Sections */
+        .home-section, .about-section, .games-section, footer {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: white;
+            color: black;
+        }
+
+        .home-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-section h2 {
+            font-size: 28px;
+            color: green;
+        }
+
+        .cta-btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: green;
+        }
+
+        /* Games Section */
+        .games-section {
+            padding: 60px 20px;
+        }
+
+        .games-section h2 {
+            font-size: 28px;
+            color: green;
+            margin-bottom: 20px;
+        }
+
+        /* Game Cards Layout */
+        .games-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .game-card {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .game-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .game-card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .game-card a {
+            display: inline-block;
+            padding: 8px 16px;
+            color: white;
+            background-color: green;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .game-card a:hover {
+            background-color: darkgreen;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: green;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1 class="logo">Yassine Flow</h1>
+            <ul>
+                <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#about" data-en="About Me" data-ar="عني">About Me</a></li>
+                <li><a href="#games" data-en="Games" data-ar="الألعاب">Games</a></li>
+                <li><a href="#contact" data-en="Contact Me" data-ar="اتصل بي">Contact Me</a></li>
+                <li><button class="language-toggle" onclick="toggleLanguage()">عربي</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <h2 data-en="Welcome to Yassine Flow's Website" data-ar="مرحباً بكم في موقع ياسين فلو">Welcome to Yassine Flow's Website</h2>
+        <p data-en="Game developer, Programmer, Content creator." data-ar="مطور ألعاب، مبرمج، صانع محتوى.">Game developer, Programmer, Content creator.</p>
+        <a href="#about" class="cta-btn" data-en="Who am I?" data-ar="من أنا؟">Who am I?</a>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2 data-en="About Me" data-ar="عني">About Me</h2>
+        <p data-en="Hello everyone! My name is Yassine, also known as Flow. I am a game developer and content creator." data-ar="مرحباً بالجميع! اسمي ياسين، المعروف باسم فلو. أنا مطور ألعاب وصانع محتوى.">
+            Hello everyone! My name is Yassine, also known as Flow. I am a game developer and content creator.
+        </p>
+    </section>
+
+    <section id="games" class="games-section">
+        <h2 data-en="My Games" data-ar="ألعابي">My Games</h2>
+        <div class="games-container">
+            <!-- Game Card 1 -->
+            <div class="game-card">
+                <img src="https://img.itch.zone/aW1nLzE4Mzg2MTQzLnBuZw==/347x500/vNpwPX.png" alt="Zombie Game" class="game-image">
+                <p data-en="A zombie survival game made by Yassine Flow." data-ar="لعبة بقاء ضد الزومبي من صنع ياسين فلو.">A zombie survival game made by Yassine Flow.</p>
+                <a href="https://flow44.itch.io/zombie-game1" target="_blank" data-en="Play Now!" data-ar="العب الآن!">Play Now!</a>
+            </div>
+
+            <!-- Game Card 2 -->
+            <div class="game-card">
+                <img src="https://img.itch.zone/aW1nLzE4NDQxNjMyLnBuZw==/original/hGFana.png" alt="Geometry Dash Game" class="game-image">
+                <p data-en="A challenging geometry-based platformer game by Yassine Flow." data-ar="لعبة تحدي جيومتري من صنع ياسين فلو.">A challenging geometry-based platformer game by Yassine Flow.</p>
+                <a href="https://flow44.itch.io/geometry-dash" target="_blank" data-en="Play Now!" data-ar="العب الآن!">Play Now!</a>
+            </div>
+
+            <!-- Game Card 3 -->
+            <div class="game-card">
+                <img src="https://img.itch.zone/aW1nLzE4Mjg2MzU2LnBuZw==/347x500/mLrwNL.png" alt="Knowledge Challenge Game" class="game-image">
+                <p data-en="A fun and educational quiz game by Yassine Flow." data-ar="لعبة اختبار ممتعة من صنع ياسين فلو.">A fun and educational quiz game by Yassine Flow.</p>
+                <a href="https://flow44.itch.io/knowledge-challenge" target="_blank" data-en="Play Now!" data-ar="العب الآن!">Play Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 data-en="Contact Me" data-ar="اتصل بي">Contact Me</h2>
+        <p data-en="For any inquiries, reach me at:" data-ar="للاستفسارات، يمكنكم التواصل عبر:">For any inquiries, reach me at:</p>
+        <a href="mailto:yassineamen56@gmail.com">yassineamen56@gmail.com</a>
+    </footer>
+
+    <script>
+        const elements = document.querySelectorAll('[data-en], [data-ar]');
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            document.querySelector('.language-toggle').textContent = currentLang === 'en' ? 'عربي' : 'English';
+
+            elements.forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLang}`);
+            });
+
+            document.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+        }
+    </script>
+
+</body>
+</html>
